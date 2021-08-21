@@ -59,6 +59,7 @@ module mdu_top
   assign mul_rd = is_mulh ? rd >> 32 : rd;
 
   // DIV STARTS //  
+  // Taken from picorv32 //
   reg             outsign;
   reg [WIDTH-1:0] dividend;
   reg [WIDTH-1:0] quotient;  
