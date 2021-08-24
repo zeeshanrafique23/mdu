@@ -16,7 +16,7 @@ Two operands, function3, and a valid signal are fetched from the target processo
 
 ---
 ## Instantiation template
-```
+```verilog
 mdu_top
 #(
   .WIDTH(32)
