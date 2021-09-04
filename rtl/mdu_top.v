@@ -59,7 +59,7 @@ module mdu_top
   end
 
   assign mul_ready = mul_done & valid;
-  assign mul_rd = is_mulh ? rd >> 32 : rd;
+  assign mul_rd = is_mulh ? rd[(2*WIDTH)-1:WIDTH] : rd[WIDTH-1:0];
 
   // DIV STARTS //  
   // Taken from picorv32 //
