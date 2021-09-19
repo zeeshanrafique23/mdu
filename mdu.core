@@ -28,6 +28,6 @@ targets:
 parameters:
   WIDTH:
     datatype    : int
-    description : Set it to 1 for SERV or 32 for normal cores
+    description : Set WIDTH of the module signals
     paramtype   : vlogparam
 
