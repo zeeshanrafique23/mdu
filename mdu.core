@@ -1,12 +1,18 @@
 CAPI=2:
 
 name : ::mdu:1.0.0
+description: M-extension for RISC-V cores
 
 filesets:
   core:
     files:
       - rtl/mdu_top.v
     file_type : verilogSource
+  
+  verilator_tb: 
+    files:
+      - bench/verilator_tb.cpp 
+    file_type : cppSource
 
 targets:
   default:
@@ -25,9 +31,37 @@ targets:
           - "-Wall"
     toplevel : mdu_top
 
+  verilator_tb:
+    default_tool : verilator
+    filesets : [core,  verilator_tb]
+    parameters:
+      - WIDTH
+      - timeout
+      - vcd
+      - vcd_start
+    tools:
+      verilator:
+        verilator_options:
+          - '--trace'
+          - '-Wall'
+    toplevel : mdu_top
+
 parameters:
   WIDTH:
     datatype    : int
     description : Set WIDTH of the module signals
     paramtype   : vlogparam
+
+  timeout:
+    datatype : int
+    paramtype : plusarg
+
+  vcd:
+    datatype : bool
+    paramtype : plusarg
+
+  vcd_start:
+    datatype    : int
+    description : Delay start of VCD dumping until the specified time
+    paramtype   : plusarg
 
