@@ -71,7 +71,7 @@ Now it's time to run SERV with MDU
 
     fusesoc run --target=verilator_tb --flag=mdu servant
 
-**Note:** All the FuseSoC commands should run from `$workspace`.
+**Note:** All the FuseSoC commands should run from `$WORKSPACE`.
 
 ### Acknowledgment
 The integration of MDU with SERV was the part of Google Summer of Code 2021 project under the banner of FOSSI Foundation, it is completed by [Zeeshan Rafique](https://github.com/zeeshanrafique23) under the mentorship of [Olof Kindgren](https://github.com/olofk). Special thanks to Olof Kindgren for helping me throughout the project.
