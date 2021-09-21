@@ -1,4 +1,7 @@
 # Multiplication and Division Unit -MDU
+
+[![Join the chat at https://gitter.im/merledu/riscv-mdu](https://badges.gitter.im/merledu/riscv-mdu.svg)](https://gitter.im/merledu/riscv-mdu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This multiplication and division unit is in compliance with RISC-V standard M-extension, which can be integrated with any existing RISC-V processor.
 
 Two operands, function3, and a valid signal are fetched from the target processor and fed to the MDU. The function3 signal which is named as `i_mdu_op`, it decides that which operation MDU has to perform on the arrival of a valid signal as shown in the table below.
